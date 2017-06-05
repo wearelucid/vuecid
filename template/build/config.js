@@ -21,6 +21,6 @@ module.exports = {
     require('postcss-nested')
   ],{{#if electron}}
   electron: true,{{/if}}{{#if jsx}}
-  cssModules: true,
+  cssModules: false,
   jsx: true{{/if}}
 }
