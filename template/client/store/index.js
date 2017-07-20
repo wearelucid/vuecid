@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import ui from 'store/ui'
 import error from 'store/error'
 import demo from 'store/demo'
+import options from 'store/options'
 /*! scaffold:import:module */
 
 Vue.use(Vuex)
@@ -12,7 +13,8 @@ const modules = {
   /*! scaffold:insert:module */
   ui,
   error,
-  demo
+  demo,
+  options
 }
 
 const getters = {
