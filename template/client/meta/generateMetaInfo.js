@@ -13,6 +13,7 @@ export default function generateMetaInfo (defaultMeta, post, options) {
   const image = generateMetaImage(defaultMeta, post)
   const metaInfo = {
     title: title,
+    ogTitle: post && post.og_title ? post.og_title : title,
     htmlAttrs: {
       lang: opts.lang
     },
@@ -24,9 +25,9 @@ export default function generateMetaInfo (defaultMeta, post, options) {
       { property: 'og:locale', content: opts.locale },
       { property: 'og:site_name', content: defaultMeta.og_site_name },
       { property: 'og:type', content: 'website' },
-      { property: 'og:title', content: title },
+      { property: 'og:title', content: ogTitle },
       { property: 'og:description', content: description },
-      { name: 'twitter:title', content: title },
+      { name: 'twitter:title', content: ogTitle },
       { name: 'twitter:description', content: description },
       { name: 'twitter:card', content: 'summary_large_image' }
       // { name: 'twitter:site', content: '@publisher_handle' },
