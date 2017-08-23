@@ -9,7 +9,7 @@ export default function generateMetaInfo (defaultMeta, post, options) {
     ...options
   }
   const title = generateMetaTitle(defaultMeta, post)
-  const ogTitle = post && post.og_title ? post.og_title : title
+  const ogTitle = post && post.og_title && post.og_enabled ? post.og_title : title
   const description = generateMetaDescription(defaultMeta, post)
   const image = generateMetaImage(defaultMeta, post)
   const metaInfo = {
